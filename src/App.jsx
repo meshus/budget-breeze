@@ -12,7 +12,14 @@ import Reports from "./pages/Reports";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: false,
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -21,7 +28,7 @@ const App = () => (
       <BrowserRouter>
         <div className="min-h-screen bg-background">
           <Header />
-          <main>
+          <main className="container mx-auto py-4">
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/dashboard" element={<Dashboard />} />
