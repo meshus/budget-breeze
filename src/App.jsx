@@ -9,6 +9,8 @@ import Expenses from "./pages/Expenses";
 import Savings from "./pages/Savings";
 import Budgets from "./pages/Budgets";
 import Reports from "./pages/Reports";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +30,8 @@ const App = () => (
               <Route path="/savings" element={<Savings />} />
               <Route path="/budgets" element={<Budgets />} />
               <Route path="/reports" element={<Reports />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </main>
         </div>
